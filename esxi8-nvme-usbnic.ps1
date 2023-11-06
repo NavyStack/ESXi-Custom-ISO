@@ -1,5 +1,5 @@
 ##############################################################################################
-# Build ESXi ISOs to install ESXi on non HCL hardware
+# Build custom ESXi 8.x ISOs for non HCL hardware
 # David Harrop
 # September 2023
 ##############################################################################################
@@ -16,7 +16,7 @@ $git8Drv = "https://raw.githubusercontent.com/itiligent/ESXi-Custom-ISO/main/8-d
 $nvmeFling = "nvme-community-driver_1.0.1.0-3vmw.700.1.0.15843807-component-18902434.zip"
 $usbFling = "ESXi80U2-VMKUSB-NIC-FLING-67561870-component-22416446.zip"
 
-# Define Ghetto VCB repo for latest release download via API
+# Define Ghetto VCB repo for latest release download via Github API
 $releaseUrl = "https://api.github.com/repos/lamw/ghettoVCB/releases/latest"
 $ghettoVCB = "vghetto-ghettoVCB-offline-bundle.zip"
 $response = Invoke-RestMethod -Uri $releaseUrl

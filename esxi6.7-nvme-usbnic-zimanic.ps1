@@ -1,14 +1,14 @@
 ##############################################################################################
-# ESXI 6.7 with community usb-nic/nvme drivers + Realtek 8125 (2.5GbE) & 1GbE 8111 (Zimaboard)
+# Build custom ESXi 6.7 ISOs for non HCL hardware and Zimaboard
 # David Harrop
 # September 2023
 ##############################################################################################
 
-# Note: After Broadcom's acquisition of VMWare in October 2023, the Community Drivers download site has been 
-# taken down and its future is unclear. The script below now downloads the last available flings from this repo directly.
-# A copy of the entire flings.vmware.com site can be found https://archive.org/details/flings.vmware.com.
-# Realtek drivers have been copied to GitHub in case they disappear in future
-# Originals can be verified at https://vibsdepot.v-front.de & https://github.com/mcr-ksh/r8125-esxi
+# Note: After Broadcom's acquisition of VMWare in October 2023, the VMware Community Drivers download site has been 
+# taken down and its future is unclear. This script now downloads saved copies of the last available flings from this repo directly.
+# Realtek drivers are now also copied from this repo in case they disappear in future and can be verified
+# at https://vibsdepot.v-front.de & https://github.com/mcr-ksh/r8125-esxi 
+# A final archive copy of the entire flings.vmware.com site can be found https://archive.org/details/flings.vmware.com
 
 # Set ESXi depot base version
 $baseESXiVer = "6.7"
@@ -20,7 +20,7 @@ $realtek8168 = "net55-r8168-8.045a-napi-offline_bundle.zip"
 $intelnic = "net-igb-5.3.2-99-offline_bundle.zip"
 $nvmeFling = "nvme-community-driver_1.0.1.0-1vmw.670.0.0.8169922-offline_bundle-17658145.zip"
 
-# Define Ghetto VCB repo for latest release download via API
+# Define Ghetto VCB repo for latest release download via Github API
 $releaseUrl = "https://api.github.com/repos/lamw/ghettoVCB/releases/latest"
 $ghettoVCB = "vghetto-ghettoVCB-offline-bundle.zip"
 $response = Invoke-RestMethod -Uri $releaseUrl

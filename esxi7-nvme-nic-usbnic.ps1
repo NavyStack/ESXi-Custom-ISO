@@ -17,7 +17,7 @@ $nvmeFling = "nvme-community-driver_1.0.1.0-3vmw.700.1.0.15843807-component-1890
 $nicFling = "Net-Community-Driver_1.2.7.0-1vmw.700.1.0.15843807_19480755.zip"
 $usbFling = "ESXi703-VMKUSB-NIC-FLING-55634242-component-19849370.zip"
 
-# Define Ghetto VCB repo for latest release download via API
+# Define Ghetto VCB repo for latest release download via Github API
 $releaseUrl = "https://api.github.com/repos/lamw/ghettoVCB/releases/latest"
 $ghettoVCB = "vghetto-ghettoVCB-offline-bundle.zip"
 $response = Invoke-RestMethod -Uri $releaseUrl

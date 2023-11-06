@@ -1,5 +1,5 @@
 ##############################################################################################
-# Build ESXi ISOs to install ESXi on non HCL hardware
+# Build custom ESXi 7.x ISOs for non HCL hardware
 # David Harrop
 # September 2023
 ##############################################################################################
